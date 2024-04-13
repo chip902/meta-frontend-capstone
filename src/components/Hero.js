@@ -18,6 +18,7 @@ const Hero = () => {
 				<div className="card-actions justify-start">
 					<Link
 						to="/reservations"
+						role="button"
 						className="btn btn-primary btn-accent"
 						aria-label="Click to Reserve a Table"
 						style={{ backgroundColor: "#F4CE14", color: "#000000" }}>

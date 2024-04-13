@@ -26,9 +26,11 @@ const BookingForm = (props) => {
 							<input id="book-date" value={date} onChange={(e) => handleChange(e.target.value)} type="date" required />
 						</div>
 						<div>
-							<label htmlFor="book-time">Choose Time</label>
+							<label htmlFor="book-time" placeholder="Choose Time">
+								Choose Time
+							</label>
 							<select id="book-time" value={times} onChange={(e) => setTimes(e.target.value)} required>
-								<option value="">Select a Time</option>
+								<option value="Select a Time">Select a Time</option>
 								{props.availableTimes.map((time) => (
 									<option key={time} value={time}>
 										{time}
@@ -59,7 +61,8 @@ const BookingForm = (props) => {
 							</select>
 						</div>
 						<div>
-							<input aria-label="On Click" type={"submit"} value={"Make Your Reservation"}></input>
+							<br />
+							<input className="btn btn-primary" aria-label="On Click" type={"submit"} value={"Make Your Reservation"}></input>
 						</div>
 					</fieldset>
 				</form>
